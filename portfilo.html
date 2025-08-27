@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#98a0b3;
+      --accent:#4f46e5;
+      --glass:rgba(255,255,255,0.04);
+      --radius:14px;
+      --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,var(--bg) 0%, #071025 100%); color:#e6eef8}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{height:64px;width:64px;border-radius:12px;object-fit:cover;border:2px solid rgba(255,255,255,0.06)}
+    h1{font-size:24px;margin:0}
+    .role{color:var(--muted);font-size:13px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
+    nav a:hover{color:#fff}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:22px}
+    .card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));padding:18px;border-radius:var(--radius);backdrop-filter:blur(6px);box-shadow:0 6px 30px rgba(4,6,10,0.6)}
+    .hero{display:flex;gap:16px;align-items:center}
+    .hero .info{flex:1}
+    .tag{color:var(--muted);margin-top:8px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .badge{background:var(--glass);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+    .contact-btns{display:flex;gap:8px;margin-top:14px}
+    .btn{padding:10px 12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#dff;cursor:pointer;text-decoration:none;font-weight:600;font-size:14px}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#fff;border:none}
+    section{margin-top:20px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03)}
+    .project h4{margin:0 0 6px 0}
+    .tech{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+    .tech span{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted)}
+    .profiles{display:flex;flex-direction:column;gap:8px}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:960px){.grid{grid-template-columns:1fr;}.projects{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}}
+    .top-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .meta{color:var(--muted);font-size:13px}
+    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+    .toggle{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:8px;color:var(--muted);cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/9919?v=4" alt="avatar" />
+        <div>
+          <h1 id="name">Gangiredla Manikanta</h1>
+          <div class="role" id="role">Web Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <div>
+        <div class="card">
+          <div class="hero">
+            <div class="info">
+              <div class="top-row">
+                <div>
+                  <div class="meta" id="location">Tirumalayapalem, India</div>
+                  <div class="tag" id="tagline">I build fast, reliable, and delightful web apps.</div>
+                </div>
+                <div>
+                  <button class="toggle" id="darkToggle">Toggle Theme</button>
+                </div>
+              </div>
+
+              <div class="badges">
+                <div class="badge" id="website">your-domain.dev</div>
+                <div class="badge" id="status">Open to work</div>
+              </div>
+
+              <div class="contact-btns">
+                <a class="btn primary" id="resumeBtn" href="#" target="_blank">Resume</a>
+                <a class="btn" id="mailBtn" href="mailto:you@example.com">Email</a>
+                <a class="btn" id="callBtn" href="tel:+910000000000">Call</a>
+              </div>
+            </div>
+          </div>
+
+          <section id="about">
+            <div class="section-title"><strong>About</strong></div>
+            <p id="aboutText" style="color:var(--muted);line-height:1.6;margin:0">I am interested in building something new.</p>
+          </section>
+
+          <section id="skills">
+            <div class="section-title"><strong>Skills</strong></div>
+            <div class="skills">
+              <div class="skill">HTML & CSS</div>
+              <div class="skill">Python</div>
+              <div class="skill">React</div>
+              <div class="skill">JavaScript</div>
+            </div>
+          </section>
+
+          <section id="projects">
+            <div class="section-title"><strong>Projects</strong></div>
+            <div class="projects">
+              <div class="project">
+                <h4>Project One</h4>
+                <div class="meta">One-liner that explains value and tech stack.</div>
+                <div class="tech"><span>React</span><span>Node</span><span>Postgres</span></div>
+                <div style="margin-top:10px"><a class="btn" href="#" target="_blank">Live</a> <a class="btn" href="#" target="_blank">Code</a></div>
+              </div>    
+              <div class="project">
+                <h4>Project Two</h4>
+                <div class="meta">One-liner that explains value and tech stack.</div>
+                <div class="tech"><span>Next.js</span><span>Tailwind</span><span>MongoDB</span></div>
+                <div style="margin-top:10px"><a class="btn" href="#" target="_blank">Live</a> <a class="btn" href="#" target="_blank">Code</a></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="experience">
+            <div class="section-title"><strong>Experience</strong></div>
+            <div style="display:grid;gap:10px;margin-top:8px">
+              <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px">
+                <div style="display:flex;justify-content:space-between;align-items:center"><strong>Job Title · Company</strong><span class="meta">Jan 2024 — Present</span></div>
+                <ul style="margin:8px 0 0 18px;color:var(--muted)"><li>Built X feature improving Y by Z%</li><li>Led project and shipped end-to-end</li></ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="education">
+            <div class="section-title"><strong>Education</strong></div>
+            <div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:10px">
+              <div style="display:flex;justify-content:space-between"><strong>B.Tech in CSE Aditya  University</strong><span class="meta">2020 — 2024</span></div>
+              <div class="meta" style="margin-top:6px">CGPA: 8.7/10</div>
+            </div>
+          </section>
+        </div>
+
+        <footer>© <span id="year"></span> Your Name. Built with HTML & CSS.</footer>
+      </div>
+
+      <aside>
+        <div class="card">
+          <div class="section-title"><strong>Profiles</strong></div>
+          <div class="profiles">
+            <a class="btn" id="github" href="https://github.com/Mastermindmani88897" target="_blank">GitHub</a>
+            <a class="btn" id="leetcode" href="https://leetcode.com/u/Mastermindmani88897/" target="_blank">LeetCode</a>
+            <a class="btn" id="codechef" href="https://www.codechef.com/users/master_mani" target="_blank">CodeChef</a>
+            <a class="btn" id="linkedin" href="https://www.linkedin.com/in/manikanta-gangiredla-853172291/" target="_blank">LinkedIn</a>
+          </div>
+
+          <div style="height:14px"></div>
+
+          <div class="section-title"><strong>Contact</strong></div>
+          <div style="color:var(--muted);font-size:14px">you@example.com<br/>+91 00000 00000</div>
+
+          <div style="height:14px"></div>
+
+          <div class="section-title"><strong>Highlights</strong></div>
+          <div style="color:var(--muted);font-size:14px">LeetCode: Contest Rating 1800+<br/>CodeChef: 4★</div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const dt=document.getElementById('darkToggle');
+    dt.addEventListener('click',()=>{
+      const r=document.documentElement;
+      if(r.style.getPropertyValue('--bg')===''){
+        r.style.setProperty('--bg','#ffffff');r.style.setProperty('--card','#f7fbff');r.style.setProperty('--muted','#556');r.style.setProperty('--accent','#2563eb');r.style.setProperty('color-scheme','light');document.body.style.color='#092';
+      }else{
+        r.style.setProperty('--bg','#0f1724');r.style.setProperty('--card','#0b1220');r.style.setProperty('--muted','#98a0b3');r.style.setProperty('--accent','#4f46e5');r.style.setProperty('color-scheme','dark');document.body.style.color='';
+      }
+    });
+  </script>
+</body>
+</html>

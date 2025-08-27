@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .p {
+            font-size: 20px;
+        }
+        .p span {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .del {
+            color: white;
+            background-color: red;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .input, .date, .time, .add {
+            font-size: 18px;
+        }
+        .add {
+            color: white;
+            background-color: green;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .first, .p {
+            display: grid;
+            grid-template-columns: 200px 150px 100px 100px;
+            column-gap: 20px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <div class="first">
+        <input class="input js-input" placeholder="To do item" onkeyup="handleKey(event)">
+        <input type="date" class="date js-date">
+        <input type="time" class="time js-time">
+        <button class="add" onclick="addToList()">Add</button>
+    </div>
+    <div class="container js-container"></div>
+
+    <script>
+        const arr = [];
+
+        // Disable past dates
+        const dateInput = document.querySelector('.js-date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
+        function handleKey(event) {
+            if (event.key === 'Enter') {
+                addToList();
+            }
+        }
+
+        function addToList() {
+            const taskInput = document.querySelector('.js-input');
+            const dateInput = document.querySelector('.js-date');
+            const timeInput = document.querySelector('.js-time');
+
+            if (taskInput.value !== '' && dateInput.value !== '' && timeInput.value !== '') {
+                arr.push({
+                    name: taskInput.value,
+                    date: dateInput.value,
+                    time: timeInput.value
+                });
+
+                displayList();
+                taskInput.value = '';
+                dateInput.value = '';
+                timeInput.value = '';
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+
+        function displayList() {
+            const container = document.querySelector('.js-container');
+            let temp = '';
+
+            arr.forEach((item, index) => {
+                temp += `
+                    <div class="p">
+                        <div>${item.name}</div>
+                        <div>${item.date}</div>
+                        <div>${item.time}</div>
+                        <button class="del" onclick="remove(${index})">Delete</button>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = temp;
+        }
+
+        function remove(index) {
+            arr.splice(index, 1);
+            displayList();
+        }
+    </script>
+</body>
+</html>
