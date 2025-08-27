@@ -4,30 +4,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    ul li a {
+      display: block;
+      padding: 12px;
+      background: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+
+    ul li a:hover {
+      background: #00bcd4;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: #fff;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-  <h1>My Portfolio</h1>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+  </nav>
 
   <!-- Projects Section -->
-  <h2>My Projects</h2>
-  <ul>
-    <li><a href="calculator.html">Calculator</a></li>
-    <li><a href="to_do_list.html">To-Do List</a></li>
-  </ul>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <ul>
+      <li><a href="calculator.html" target="_blank">🧮 Calculator</a></li>
+      <li><a href="to_do_list.html" target="_blank">📝 To-Do List</a></li>
+    </ul>
+  </section>
 
   <!-- Certifications Section -->
-  <h2>My Certifications</h2>
-  <ul>
-    <li><a href="CERTIFICATES/23a91a05f4 (CERTIFICATE_OF_INTERNSHIP).pdf" target="_blank">Certificate of Internship</a></li>
-    <li><a href="CERTIFICATES/23A91A05F4_CSS.pdf" target="_blank">CSS Certificate</a></li>
-    <li><a href="CERTIFICATES/23A91A05F4_HTML.pdf" target="_blank">HTML Certificate</a></li>
-    <li><a href="CERTIFICATES/23A91A05F4_JS.pdf" target="_blank"> JAVASCRIPT Certificate</a></li>
-    <li><a href="CERTIFICATES/Basics_of_Python.pdf" target="_blank">BASICS OF PYTHON Certificate</a></li>
-    <li><a href="CERTIFICATES/c certificate.pdf" target="_blank">C Certificate</a></li>
-    <li><a href="CERTIFICATES/cpp certificate.pdf" target="_blank"> CPP Certificate</a></li>
-    <li><a href="CERTIFICATES/infosys_sql_and_dbms(23A91A05F4).pdf" target="_blank">SQL AND DBMS Certificate</a></li>
-    <li><a href="CERTIFICATES/JAVA_FOUNDATIONS_ORACLE.pdf" target="_blank">JAVA_FOUNDATIONS_ORACLE Certificate</a></li>
-  
-  </ul>
+  <section id="certifications">
+    <h2>My Certifications</h2>
+    <ul>
+      <li><a href="CERTIFICATES/23a91a05f4 (CERTIFICATE_OF_INTERNSHIP).pdf" target="_blank">Internship Certificate</a></li>
+      <li><a href="CERTIFICATES/23A91A05F4_CSS.pdf" target="_blank">CSS Certificate</a></li>
+      <li><a href="CERTIFICATES/23A91A05F4_HTML.pdf" target="_blank">HTML Certificate</a></li>
+      <li><a href="CERTIFICATES/23A91A05F4_JS.pdf" target="_blank">JavaScript Certificate</a></li>
+      <li><a href="CERTIFICATES/Basics_of_Python.pdf" target="_blank">Python Certificate</a></li>
+      <li><a href="CERTIFICATES/c certificate.pdf" target="_blank">C Certificate</a></li>
+      <li><a href="CERTIFICATES/cpp certificate.pdf" target="_blank">C++ Certificate</a></li>
+      <li><a href="CERTIFICATES/infosys_sql_and_dbms(23A91A05F4).pdf" target="_blank">SQL & DBMS Certificate</a></li>
+      <li><a href="CERTIFICATES/JAVA_FOUNDATIONS_ORACLE.pdf" target="_blank">Java Foundations Certificate</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 My Portfolio | Built with ❤️</p>
+  </footer>
+
 </body>
 </html>
